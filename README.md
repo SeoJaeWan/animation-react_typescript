@@ -1,46 +1,75 @@
-# Getting Started with Create React App
+# animation-react
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Fade, Text 애니메이션을 React에서 사용할 수 있게 구현한 라이브러리입니다.
 
-## Available Scripts
+<a href="https://seojaewan.github.io/animation-react/" target="_blank">Demo</a>
 
-In the project directory, you can run:
+## Install
 
-### `npm start`
+```bash
+npm install react-sns-login
+# or
+yarn add react-sns-login
+```
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## Simple Usage
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+### Fade
 
-### `npm test`
+```jsx live
+return (
+  <Fade type="left" delay={1} duration={1} isRepeat={false} translate="100px">
+    <div>// Your Code</div>
+  </Fade>
+);
+```
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+#### props
 
-### `npm run build`
+type : Fade 유형 ( default : "opacity" )
+[ opacity, top, bottom, left, right ]
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+delay : 이벤트 실행 대기 시간 ( default : 1, unit : s )
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+duration : 이벤트 진행 시간 ( default : 1, unit : s )
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+isRepeat : 반복 설정 ( default : false )
 
-### `npm run eject`
+translate : Fade 이동 거리 ( default : "100px" )
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+### Text
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+```jsx live
+return (
+  <Text
+    value="Hello! World!"
+    type="slide"
+    isRepeat={true}
+    option={{ translate: "translateX(100px)" }}
+  />
+);
+```
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+#### props
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+type : Text Animation 유형 ( default : "opacity" )
+[ opacity, underline, slide, drop ]
 
-## Learn More
+delay : 이벤트 실행 대기 시간 ( default : 1, unit : s )
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+duration : 이벤트 진행 시간 ( default : 1, unit : s )
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+isRepeat : 반복 설정 ( default : false )
+
+option : 이벤트 옵션 ( default : {} )
+
+```jsx live
+option as underLine : {
+background: "red",
+height: "10px",
+}
+
+option as slide : {
+translate: "translateX(100px)"
+}
+```
