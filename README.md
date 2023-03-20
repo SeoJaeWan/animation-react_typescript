@@ -7,9 +7,9 @@ Fade, Text 애니메이션을 React에서 사용할 수 있게 구현한 라이�
 ## Install
 
 ```bash
-npm install react-sns-login
+npm install animation-react
 # or
-yarn add react-sns-login
+yarn add animation-react
 ```
 
 ## Simple Usage
