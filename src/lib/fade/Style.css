@@ -1,0 +1,21 @@
+.aniation_container {
+  position: relative;
+
+  overflow: hidden;
+}
+
+.animation_fade {
+  width: 100%;
+  opacity: 0;
+}
+
+.animation_trigger {
+  position: absolute;
+  width: 1px;
+  height: 2px;
+
+  opacity: 0;
+
+  left: 0;
+  top: 0;
+}

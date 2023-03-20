@@ -1,0 +1,11 @@
+.FadeBox {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 300px;
+  height: 100px;
+
+  background: #cb5dd8;
+  color: white;
+  font-size: 24px;
+}

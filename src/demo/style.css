@@ -1,0 +1,155 @@
+@keyframes scroll {
+  0% {
+    transform: translateY(-10px) scale(1);
+  }
+
+  50% {
+    transform: translateY(0) scale(1.2);
+  }
+
+  100% {
+    transform: translateY(0) scale(1);
+  }
+}
+
+* {
+  font-family: "Roboto", sans-serif;
+  box-sizing: border-box;
+}
+
+.SelectContainer {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.SelectButton {
+  padding: 10px 30px;
+
+  background-color: white;
+  border: 1px solid #ff5733;
+  border-radius: 5px;
+  margin-left: 10px;
+
+  cursor: pointer;
+}
+
+.SelectButton__Fade {
+  background-color: #ff5733;
+  color: white;
+}
+
+.EventField {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin: 150px 50px;
+}
+
+.EventBox {
+  border: 5px solid #818987;
+  border-radius: 5px;
+  overflow-y: scroll;
+
+  width: 100%;
+  height: 400px;
+
+  padding-bottom: 50px;
+}
+
+.EventBox .animation_word {
+  font-size: 2rem;
+}
+
+.EventPrevBox {
+  height: 50vh;
+  width: 100%;
+
+  padding: 100px;
+}
+
+.EventPrevBox span {
+  display: inline-block;
+
+  animation: scroll 1s infinite linear;
+}
+
+.EventOptionBox {
+  display: flex;
+  flex-wrap: wrap;
+  width: 60%;
+  height: 350px;
+
+  background: #818987;
+  border-radius: 5px;
+
+  margin-top: 10px;
+  padding: 10px;
+}
+
+.EventTitle {
+  width: 100%;
+  margin-top: 10px;
+  margin-bottom: 0;
+
+  color: black;
+}
+
+.EventOptionField p {
+  color: white;
+}
+
+.EventOptionButton {
+  padding: 5px 10px;
+  margin-right: 5px;
+  background-color: white;
+
+  border: 1px solid #2d9174;
+  border-radius: 5px;
+
+  cursor: pointer;
+}
+
+.EventOptionButton_Active {
+  background: #2d9174;
+  color: white;
+}
+
+.EventOptionField input {
+  padding: 5px;
+}
+
+.EventOptionHalf {
+  width: 50%;
+}
+
+.EventTextField {
+  width: 38%;
+  height: 350px;
+
+  margin-top: 10px;
+  padding: 10px 50px;
+
+  color: white;
+
+  background: #818987;
+  border-radius: 5px;
+}
+
+.EventOptionWrapper {
+  width: calc(100% / 3);
+}
+
+.EventOptionAll {
+  width: 100%;
+}
+
+.EventOptionAll input {
+  width: 100%;
+}
+
+textarea {
+  width: 100%;
+  height: 100px;
+
+  resize: none;
+}
